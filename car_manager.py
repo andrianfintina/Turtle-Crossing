@@ -12,12 +12,7 @@ class CarManager(Turtle):
     
     def __init__(self):
         super().__init__()
-        self.shape("square")
-        self.penup()
-        self.setheading(180)
-        self.color(random.choice(COLORS))
-        self.shapesize(HIGHT, WEIGHT)
-        self.set_position(self)
+        self.add_car()
     
     def car_move(self):
         self.forward(MOVE_INCREMENT)
@@ -25,6 +20,14 @@ class CarManager(Turtle):
     def set_position(self, car):
         car.setx(START_X)
         car.sety(random.randint(-280, 280))
+    
+    def add_car(self):
+        self.shape("square")
+        self.penup()
+        self.setheading(180)
+        self.color(random.choice(COLORS))
+        self.shapesize(HIGHT, WEIGHT)
+        self.set_position(self)
 
     
     
